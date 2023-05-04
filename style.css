@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Fasthand&display=swap');
 
 :root{
 	--primary: #6b59d3;
@@ -8,6 +9,19 @@
 	--header-clr: #25273d;
 	--next-btn-hover: #8577d2;
 	--back-btn-hover: #8b8c8c;
+}
+body {
+	position: relative !important;
+}
+.logo {
+	font-family: 'Delicious Handrawn', cursive !important;
+	font-style: italic;
+	text-transform: none !important;
+	font-size: 30px !important;
+	padding: 0 !important;
+	margin: 0 !important;
+	letter-spacing: 2px;
+	font-weight: bold;
 }
 #contact ul li {
     list-style: none;
@@ -266,8 +280,8 @@ ul li a:hover {
     right: 0;
     height: 100%;
     width: 100%;
-    background-color: #f8f8ff;
-    filter: blur(5px);
+    background-color: #e2e2e4;
+    filter: blur(2px) brightness(50%);
     border-left: 2px solid red;
     animation: animate 10s steps(40) infinite;
 }
