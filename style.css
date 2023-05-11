@@ -69,6 +69,10 @@ ul li a:hover {
 	position: relative;
 }
 
+.text-white {
+	--bs-text-opacity: 1;
+}
+
 .wrapper .header ul li:last-child{
 	margin-right: 0;
 }

@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=Delicious+Handrawn&family=Fasthand&display=swap');
+
+.bank-title {
+  white-space: nowrap;overflow: hidden;text-overflow: ellipsis; max-width: 300px;
+  font-size: 14px;
+  font-weight:bold;
+  text-transform: uppercase;
+  text-align: center;
+  font-family: arial;
+}
+
+.card-body-item {
+  padding: 10px;
+  height: 50px;
+  color:black;
+}
+
+.card-body-item-lg {
+  /* height: 120px; */
+  height: auto;
+  color:black;
+  padding: 8px;
+}
+
+.card-body-item-bottom {
+  border-bottom: 1px solid lightgray;
+}
+
+.tracker-grid {
+  max-width: 370px;
+  min-width:370px;
+}
+
+
+.logo {
+	font-family: 'Delicious Handrawn', cursive !important;
+	font-style: italic;
+	text-transform: none !important;
+	font-size: 30px !important;
+	padding: 0 !important;
+	margin: 0 10px !important;
+	font-weight: bold;
+}
+
+.tracking {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #f8f8ff;
+    text-align: center;
+    text-transform: uppercase;
+    font-family: sans-serif;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+}
+
+.tracking:hover {
+    transform: translateY(-10px);
+    background: transparent !important;
+    text-decoration: underline;
+}
+
+.steps {
+  justify-content: space-between;
+  gap: 1rem;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.steps::before {
+  content: "";
+  position: absolute;
+  top: 23px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 70%;
+  height: 5px;
+  background-color: #ddd;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.tracker-card {
+  max-width: 340px;
+}
+
+.circle {
+  margin-bottom: 15px;
+  height: 50px;
+  width: 50px;
+  border: 5px solid #f8f8ff;
+  border-radius: 50%;
+  display: grid;
+  place-content: center;
+  background: #eee;
+  z-index: 2;
+}
+
+@media screen and (max-width: 1315px) {
+  .steps {
+    justify-content: space-around;
+  }
+
+  .steps::before {
+    display: none;
+  }
+}

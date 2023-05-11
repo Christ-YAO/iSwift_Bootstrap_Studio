@@ -8,7 +8,7 @@ const tabSortant = document.querySelector('.sortant');
 
 btnEntrant.addEventListener('click', () => {
     console.log(btnEntrant)
-        tabEntrant.style.display="flex";
+        tabEntrant.style.display="block";
         tabSortant.style.display="none";
         textEntrant.style.display="flex";
         textSortant.style.display="none";
@@ -21,7 +21,7 @@ btnSortant.addEventListener('click', () => {
         textEntrant.style.display="none";
         textSortant.style.display="flex";
         tabEntrant.style.display="none";
-        tabSortant.style.display="flex";
+        tabSortant.style.display="block";
         btnEntrant.classList.remove('active');
         btnSortant.classList.add('active');
     })
