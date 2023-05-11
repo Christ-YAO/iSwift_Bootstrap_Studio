@@ -1,0 +1,29 @@
+{
+  "posts": [
+    {
+      "id": 1,
+      "account": "1265-547388578393-07",
+      "bank": "CREDIT AGRICOLE",
+      "country": "FRANCE",
+      "city": "ANNECY LE VIEUX"
+    },
+    {
+      "id": 2,
+      "account": "1265-547388578394-07",
+      "bank": "ATTIJARIWAFA BANK (FORMERLY BANQUE COMMERCIALE DU MAROC)",
+      "country": "MOROCCO",
+      "city": "CASABLANCA"
+    },
+    {
+      "id": 3,
+      "account": "1265-547388578395-07",
+      "bank": "DEUTSCHE BANK TRUST COMPANY AMERICAS",
+      "country": "UNITED STATES OF AMERICA",
+      "city": "NEW YORK,NY"
+    }
+  ],
+  "comments": [
+    { "id": 1, "body": "some comment", "postId": 1 }
+  ],
+  "profile": { "name": "typicode" }
+}

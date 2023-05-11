@@ -37,7 +37,7 @@
             <div class="typewriter">
                 <span class="text second-text"></span>
             </div><br>
-            <div style="width: 60%;margin-right: 0px;margin-left: 29px;padding: 10px;border-radius: 5px;background: #f8f8ffee;border-style: solid;border-color: lightgray;border-top-style: solid;font-family: 'Open Sans', sans-serif;"><input type="search" placeholder="Recherche" style="width: 100%;border-radius: 5px; font-size: 14px; padding-left: 10px; outline: none; border: 1px solid lightgrey;">
+            <div style="width: 60%;margin-right: 0px;margin-left: 29px;padding: 10px;border-radius: 5px;background: #f8f8ffee;border-style: solid;border-color: lightgray;border-top-style: solid;font-family: 'Open Sans', sans-serif;"><input type="search" class="search" placeholder="Recherche" style="width: 100%;border-radius: 5px; font-size: 14px; padding-left: 10px; outline: none; border: 1px solid lightgrey;">
                 <div class="table-responsive" style="font-size: 14px;text-align: left;background: transparent;border-radius: 5px;margin-top: 10px;">
                     <table class="table">
                         <thead>
@@ -48,8 +48,8 @@
                                 <th style="width: 130PX;">Ville</th>
                             </tr>
                         </thead>
-                        <tbody style="font-size: 13px;">
-                            <tr>
+                        <tbody style="font-size: 13px;" class="table">
+                            <!-- <tr>
                                 <td style="font-family: 'Open Sans', sans-serif;"><span style="background-color: rgba(255, 255, 255, 0.867);">1265-547388578393-07</span><br></td>
                                 <td><a href="/transactions.html" style="font-size: 12px;color: BLUE;">CREDIT AGRICOLE</a></td>
                                 <td>FRANCE</td>
@@ -66,7 +66,7 @@
                                 <td><a href="/transactions.html" style="font-size: 12px;color: BLUE;">CREDIT AGRICOLE</a></td>
                                 <td style="line-height: 18px;"><span style="background-color: rgba(255, 255, 255, 0.867);">UNITED STATES OF AMERICA</span><br></td>
                                 <td><span style="background-color: rgba(255, 255, 255, 0.867);">NEW YORK,NY</span><br></td>
-                            </tr>
+                            </tr> -->
                         </tbody>
                     </table>
                 </div>
@@ -103,6 +103,7 @@
     <script src="assets/bootstrap/js/bootstrap.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/baguettebox.js/1.11.1/baguetteBox.min.js"></script>
     <script src="assets/js/creative.js"></script>
+    <script src="assets/js/index.js"></script>
     <script>
         // Typewriter
         const text = document.querySelector(".second-text")
