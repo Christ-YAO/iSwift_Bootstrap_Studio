@@ -12,6 +12,7 @@
 }
 body {
 	position: relative !important;
+	font-family: 'Open Sans', sans-serif;
 }
 .logo {
 	font-family: 'Delicious Handrawn', cursive !important;
@@ -49,7 +50,7 @@ ul li a:hover {
 	width: 550px;
 	max-width: 100%;
 	background: #f8f8ffdd;
-	margin: 100px 70px 0;
+	margin: 30px 70px 0;
 	padding: 20px;
 	border-radius: 5px;
     margin-bottom: 50px;
@@ -70,6 +71,9 @@ ul li a:hover {
 }
 
 .text-white {
+	--bs-text-opacity: 0;
+}
+.text-white.white {
 	--bs-text-opacity: 1;
 }
 
@@ -269,7 +273,7 @@ ul li a:hover {
 /* Typewriter */
 .typewriter {
     text-align: left;
-    margin-left: 5%;
+    margin-left: 30px;
 }
 .typewriter .text {
     position: relative;
@@ -277,7 +281,7 @@ ul li a:hover {
     font-size: 30px;
     font-weight: 600;
 }
-.typewriter .text.second-text::before {
+/* .typewriter .text.second-text::before {
     content: "";
     position: absolute;
     top: 0;
@@ -288,7 +292,7 @@ ul li a:hover {
     filter: blur(2px) brightness(50%);
     border-left: 2px solid red;
     animation: animate 10s steps(40) infinite;
-}
+} */
 @keyframes animate {
     40%, 60% {
         width: 0%;

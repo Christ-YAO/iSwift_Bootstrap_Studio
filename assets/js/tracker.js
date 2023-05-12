@@ -7,10 +7,11 @@ let fetchData = () => {
     let url = 'http://localhost:3000/posts';
 
         fetch(url).then((resp) => resp.json()).then((data) => {
+
                     infos.innerHTML = `
-                <div class="row">
+                <div class="row" style="justify-content: space-around">
                     <div class="col-md-6 col-xl-3 mb-4">
-                        <div class="card text-white bg-success shadow border-start-primary py-2" style="padding: 0 10px;"><small>Final Status <span style="float: right;">${data.value_date}</span></small>
+                        <div class="card text-white bg-success shadow border-start-primary py-2 white" style="padding: 0 10px; height: 100px;"><small>Etat final<span style="float: right; color: #f8f8ff">${data.value_date}</span></small>
                             <div class="card-body">
                                 <div class="row align-items-center no-gutters">
                                     <div class="col-auto"><i class="fas fa-check fa-2x text-gray-300"></i></div>
@@ -20,10 +21,10 @@ let fetchData = () => {
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-3 mb-4">
-                        <div class="card text-white bg-dark">
+                        <div class="card text-white bg-dark white" style="height: 100px;">
                             <div class="card-body">
                                 <h4 class="card-title"><strong>54 180.8 EUR</strong></h4>
-                                <p class="card-text">Instructed: 54 200 EUR
+                                <p class="card-text">Montant : ${data.instructed_amount} EUR
                                   <label style="float:right; font-weight:bold">SHAR</label>
                                 </p>
 
@@ -31,7 +32,7 @@ let fetchData = () => {
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-2 mb-4">
-                        <div class="card text-white bg-dark shadow border-start-primary py-2"><small>Total duration</small>
+                        <div class="card text-white bg-dark shadow border-start-primary py-2 white" style="height: 100px;"><small style="padding-left: 15px; margin-top: 5px">Durée total</small>
                             <div class="card-body">
                                 <div class="row align-items-center no-gutters">
                                     <div class="col-auto"><i class="far fa-clock fa-2x text-gray-300" style="font-size: 22px;"></i>
@@ -43,7 +44,7 @@ let fetchData = () => {
                         </div>
                     </div>
                     <div class="col-md-6 col-xl-3 mb-4">
-                        <div class="card text-white bg-dark shadow border-start-primary py-2"><small>Tracking number</small>
+                        <div class="card text-white bg-dark shadow border-start-primary py-2 white" style="height: 100px;"><small style="padding-left: 15px">Numéro de suivi</small>
                             <div class="card-body">
                                 <div class="row align-items-center no-gutters">
                                     <div class="col"><strong>${data.uetr}</strong></div>
@@ -60,8 +61,8 @@ let fetchData = () => {
                 const senderData = data.sender_data;
                 const intermediaryData = data.intermediary_data
                 const receiveryData = data.receiver_data;
-
-
+                
+                
                     steps.innerHTML = `
                 <div class="col-md-auto col-xl-auto mb-auto tracker-grid step" icon="fa fa-checkmark" >
                 <div class="circle"><i class="fas fa-check" title="Completed"></i></div>
@@ -77,7 +78,6 @@ let fetchData = () => {
                           <i class="col-1 fa fa-map-marker"></i>
                            <label class="col-11">
                              ${senderData.event_data.city},</br>
-                             Paris,</br>
                              ${senderData.event_data.country}
                            </label>
                        </div>
@@ -115,7 +115,6 @@ let fetchData = () => {
 
                 <div class="col-md-auto col-xl-auto mb-auto tracker-grid step" icon="fa fa-checkmark" >
                 <div class="circle"><i class="fas fa-check" title="Completed"></i></div>
-
                 <div class="card text-white bg-white shadow border-start-primary tracker-card">
                   <div class="card-header bg-dark" style="color:white"><label class="bank-title ">
                     <i class="fa fa-building"></i>
@@ -128,7 +127,6 @@ let fetchData = () => {
                           <i class="col-1 fa fa-map-marker"></i>
                            <label class="col-11">
                              ${intermediaryData[0].event_data.city},</br>
-                             Paris,</br>
                              ${intermediaryData[0].event_data.country}
                            </label>
                        </div>
@@ -178,7 +176,6 @@ let fetchData = () => {
                           <i class="col-1 fa fa-map-marker"></i>
                            <label class="col-11">
                              ${receiveryData.event_data.city},</br>
-                             Paris,</br>
                              ${receiveryData.event_data.country}
                            </label>
                        </div>
@@ -215,13 +212,13 @@ let fetchData = () => {
               </div>
                 `;
 
-
-
+                
+                
         })
+        //if error occurs
         .catch(() => {
             result.innerHTML = `<h3 class="msg">Error Occured</h3>`
         })
     }
 
-    fetchData();
-//window.addEventListener("load", fetchData)
+window.addEventListener("load", fetchData)

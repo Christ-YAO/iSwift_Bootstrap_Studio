@@ -80,7 +80,7 @@
   transform: translateX(-50%);
   width: 70%;
   height: 5px;
-  background-color:  #0dcaf0;
+  background-color: #0dcaf0;
 }
 
 .step {
@@ -97,7 +97,7 @@
   margin-bottom: 15px;
   height: 50px;
   width: 50px;
-  border: 5px solid #f8f8ff;
+  border: 5px solid #fff;
   border-radius: 50%;
   display: grid;
   place-content: center;
@@ -105,11 +105,14 @@
   z-index: 2;
 }
 
+.circle i {
+  color: #f8f8ff;
+}
+
 @media screen and (max-width: 1315px) {
   .steps {
     justify-content: space-around;
   }
-
   .steps::before {
     display: none;
   }
