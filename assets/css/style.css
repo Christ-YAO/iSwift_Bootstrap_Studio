@@ -80,7 +80,7 @@
   transform: translateX(-50%);
   width: 70%;
   height: 5px;
-  background-color: #ddd;
+  background-color:  #0dcaf0;
 }
 
 .step {
@@ -101,7 +101,7 @@
   border-radius: 50%;
   display: grid;
   place-content: center;
-  background: #eee;
+  background: #0dcaf0;
   z-index: 2;
 }
 

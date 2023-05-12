@@ -7,7 +7,6 @@ let fetchData = () => {
     let url = 'http://localhost:3000/posts';
 
         fetch(url).then((resp) => resp.json()).then((data) => {
-
                     infos.innerHTML = `
                 <div class="row">
                     <div class="col-md-6 col-xl-3 mb-4">
@@ -47,7 +46,7 @@ let fetchData = () => {
                         <div class="card text-white bg-dark shadow border-start-primary py-2"><small>Tracking number</small>
                             <div class="card-body">
                                 <div class="row align-items-center no-gutters">
-                                    <div class="col"><strong>dhhdhffhfhfh</strong></div>
+                                    <div class="col"><strong>${data.uetr}</strong></div>
                                 </div>
                             </div>
                         </div>
@@ -61,8 +60,8 @@ let fetchData = () => {
                 const senderData = data.sender_data;
                 const intermediaryData = data.intermediary_data
                 const receiveryData = data.receiver_data;
-                
-                
+
+
                     steps.innerHTML = `
                 <div class="col-md-auto col-xl-auto mb-auto tracker-grid step" icon="fa fa-checkmark" >
                 <div class="circle"><i class="fas fa-check" title="Completed"></i></div>
@@ -116,6 +115,7 @@ let fetchData = () => {
 
                 <div class="col-md-auto col-xl-auto mb-auto tracker-grid step" icon="fa fa-checkmark" >
                 <div class="circle"><i class="fas fa-check" title="Completed"></i></div>
+
                 <div class="card text-white bg-white shadow border-start-primary tracker-card">
                   <div class="card-header bg-dark" style="color:white"><label class="bank-title ">
                     <i class="fa fa-building"></i>
@@ -215,13 +215,13 @@ let fetchData = () => {
               </div>
                 `;
 
-                
-                
+
+
         })
-        //if error occurs
         .catch(() => {
             result.innerHTML = `<h3 class="msg">Error Occured</h3>`
         })
     }
 
-window.addEventListener("load", fetchData)
+    fetchData();
+//window.addEventListener("load", fetchData)
