@@ -64,153 +64,163 @@ let fetchData = () => {
                 
                 
                     steps.innerHTML = `
-                <div class="col-md-auto col-xl-auto mb-auto tracker-grid step" icon="fa fa-checkmark" >
-                <div class="circle"><i class="fas fa-check" title="Completed"></i></div>
-                <div class="card text-white bg-white shadow border-start-primary tracker-card">
-                  <div class="card-header bg-dark" style="color:white"><label class="bank-title ">
-                    <i class="fa fa-building"></i>
-                    &nbsp;${senderData.event_data.bank_name}</label></div>
-                  <div class="card-body bg-white">
-                     <div class="card-body-item-lg card-body-item-bottom">
-                       <p style="float: left; font-size: 12px; font-weight: bold; color:black"><i class="fa fa-globe"></i>  ${senderData.event_data.bic}</p>
-                       <p style="float: right; font-size:10px; color: black; max-width: 100px; overflow: hidden !important; white-space: nowrap; text-overflow: ellipsis;">${senderData.event_data.bank_name}</p>
-                       <div class="row col-12" style="color:black">
-                          <i class="col-1 fa fa-map-marker"></i>
-                           <label class="col-11">
-                             ${senderData.event_data.city},</br>
-                             ${senderData.event_data.country}
-                           </label>
-                       </div>
-                     </div>
-                    <div class="card-body-item-lg card-body-item-bottom" style="padding: 15px; text-align: center">
-                      <p><i class="fa fa-arrow-right"></i> <i class="fa fa-clock"></i></p>
-                        <p>
-                          <span>
-                            ${senderData.event_data.last_update_time}
-                          </span>
-                        </p>
-                    </div>
-                    <div class="card-body-item card-body-item-bottom  row col-12">
-                      <p class="col-4">
-                        <label style=" font-size: 14px"><i class="fa fa-money-bill"></i> <i class="fa fa-arrow-right"></i>  </label>
-                      </p>
-                      <p class="col-8" style="display: block">
-                        <label style="font-weight: bold; font-size: 14px">54 178 EUR</label>
-                      </p>
-                    </div>
-                    <div class="card-body-item card-body-item-bottom  row col-12">
-                      <p class="col-4">
-                        <label style=" font-size: 14px"><i class="fa fa-money-bill"></i> <i class="fa fa-arrow-down"></i>  </label>
-                      </p>
-                      <p class="col-8" style="display: block">
-                        <label style="font-weight: bold; font-size: 14px; "> 22 EUR</label>
-                      </p>
-                    </div>
-                    <div class="card-body-item p-4" style="text-align: center";>
-                       <b >${senderData.event_data.instruction_identification}</b>
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-                <div class="col-md-auto col-xl-auto mb-auto tracker-grid step" icon="fa fa-checkmark" >
-                <div class="circle"><i class="fas fa-check" title="Completed"></i></div>
-                <div class="card text-white bg-white shadow border-start-primary tracker-card">
-                  <div class="card-header bg-dark" style="color:white"><label class="bank-title ">
-                    <i class="fa fa-building"></i>
-                    &nbsp;${intermediaryData[0].event_data.bank_name}</label></div>
-                  <div class="card-body bg-white">
-                     <div class="card-body-item-lg card-body-item-bottom">
-                       <p style="float: left; font-size: 12px; font-weight: bold; color:black"><i class="fa fa-globe"></i>  ${intermediaryData[0].event_data.bic}</p>
-                       <p style="float: right; font-size:10px; color: black; max-width: 120px; overflow: hidden !important; white-space: nowrap; text-overflow: ellipsis;">${intermediaryData[0].event_data.bank_name}</p>
-                       <div class="row col-12" style="color:black">
-                          <i class="col-1 fa fa-map-marker"></i>
-                           <label class="col-11">
-                             ${intermediaryData[0].event_data.city},</br>
-                             ${intermediaryData[0].event_data.country}
-                           </label>
-                       </div>
-                     </div>
-                    <div class="card-body-item-lg card-body-item-bottom" style="padding: 15px; text-align: center">
-                      <p><i class="fa fa-arrow-right"></i> <i class="fa fa-clock"></i></p>
-                        <p>
-                          <span>
-                            ${intermediaryData[0].event_data.last_update_time}
-                          </span>
-                        </p>
-                    </div>
-                    <div class="card-body-item card-body-item-bottom  row col-12">
-                      <p class="col-4">
-                        <label style=" font-size: 14px"><i class="fa fa-money-bill"></i> <i class="fa fa-arrow-right"></i>  </label>
-                      </p>
-                      <p class="col-8" style="display: block">
-                        <label style="font-weight: bold; font-size: 14px">54 178 EUR</label>
-                      </p>
-                    </div>
-                    <div class="card-body-item card-body-item-bottom  row col-12">
-                      <p class="col-4">
-                        <label style=" font-size: 14px"><i class="fa fa-money-bill"></i> <i class="fa fa-arrow-down"></i>  </label>
-                      </p>
-                      <p class="col-8" style="display: block">
-                        <label style="font-weight: bold; font-size: 14px; "> 22 EUR</label>
-                      </p>
-                    </div>
-                    <div class="card-body-item p-4" style="text-align: center";>
-                       <b >${intermediaryData[0].event_data.instruction_identification}</b>
+                    <div class="col-md-auto col-xl-auto mb-auto tracker-grid step" icon="fa fa-checkmark" >
+                    <div class="circle"><i class="fas fa-check" title="Completed"></i></div>
+                    <div class="card text-white bg-white shadow border-start-primary tracker-card">
+                      <div class="card-header bg-dark" style="color:white"><label class="bank-title ">
+                        <i class="fa fa-building"></i>
+                        &nbsp;${senderData.event_data.bank_name}</label></div>
+                      <div class="card-body bg-white">
+                         <div class="card-body-item-lg card-body-item-bottom">
+                           <p style="float: left; font-size: 12px; font-weight: bold; color:black"><i class="fa fa-globe"></i>  ${senderData.event_data.bic}</p>
+                           <p style="float: right; font-size:10px; color: black; max-width: 90px; overflow: hidden !important;">${senderData.event_data.bank_name}</p>
+                           <div class="row col-12" style="color:black">
+                              <i class="col-1 fa fa-map-marker"></i>
+                               <label class="col-11">
+                                 ${senderData.event_data.city},</br>
+                                 ${senderData.event_data.country}
+                               </label>
+                           </div>
+                         </div>
+                        <div class="card-body-item-lg card-body-item-bottom" style="padding: 15px; text-align: center">
+                          <p><i class="fa fa-arrow-right"></i> <i class="fa fa-clock"></i></p>
+                            <p>
+                              <span>
+                                ${senderData.event_data.last_update_time}
+                              </span>
+                            </p>
+                        </div>
+                        <div class="card-body-item card-body-item-bottom  row col-12">
+                          <p class="col-4">
+                            <label style=" font-size: 14px"><i class="fa fa-money-bill"></i> <i class="fa fa-arrow-right"></i>  </label>
+                          </p>
+                          <p class="col-8" style="display: block">
+                            <label style="font-weight: bold; font-size: 14px">54 178 EUR</label>
+                          </p>
+                        </div>
+                        <div class="card-body-item card-body-item-bottom  row col-12">
+                          <p class="col-4">
+                            <label style=" font-size: 14px"><i class="fa fa-money-bill"></i> <i class="fa fa-arrow-down"></i>  </label>
+                          </p>
+                          <p class="col-8" style="display: block">
+                            <label style="font-weight: bold; font-size: 14px; "> 22 EUR</label>
+                          </p>
+                        </div>
+                        <div class="card-body-item p-4" style="text-align: center";>
+                           <b >${senderData.event_data.instruction_identification}</b>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-
-                <div class="col-md-auto col-xl-auto mb-auto tracker-grid step" icon="fa fa-checkmark" >
-                <div class="circle"><i class="fas fa-check" title="Completed"></i></div>
-                <div class="card text-white bg-white shadow border-start-primary tracker-card">
-                  <div class="card-header bg-dark" style="color:white"><label class="bank-title ">
-                    <i class="fa fa-building"></i>
-                    &nbsp;${receiveryData.event_data.bank_name}</label></div>
-                  <div class="card-body bg-white">
-                     <div class="card-body-item-lg card-body-item-bottom">
-                       <p style="float: left; font-size: 12px; font-weight: bold; color:black"><i class="fa fa-globe"></i>  ${receiveryData.event_data.bic}</p>
-                       <p style="float: right; font-size:10px; color: black; max-width: 120px; overflow: hidden !important; white-space: nowrap; text-overflow: ellipsis;">${receiveryData.event_data.bank_name}</p>
-                       <div class="row col-12" style="color:black">
-                          <i class="col-1 fa fa-map-marker"></i>
-                           <label class="col-11">
-                             ${receiveryData.event_data.city},</br>
-                             ${receiveryData.event_data.country}
-                           </label>
-                       </div>
-                     </div>
-                    <div class="card-body-item-lg card-body-item-bottom" style="padding: 15px; text-align: center">
-                      <p><i class="fa fa-arrow-right"></i> <i class="fa fa-clock"></i></p>
-                        <p>
-                          <span>
-                            ${receiveryData.event_data.last_update_time}
-                          </span>
-                        </p>
-                    </div>
-                    <div class="card-body-item card-body-item-bottom  row col-12">
-                      <p class="col-4">
-                        <label style=" font-size: 14px"><i class="fa fa-money-bill"></i> <i class="fa fa-arrow-right"></i>  </label>
-                      </p>
-                      <p class="col-8" style="display: block">
-                        <label style="font-weight: bold; font-size: 14px">54 178 EUR</label>
-                      </p>
-                    </div>
-                    <div class="card-body-item card-body-item-bottom  row col-12">
-                      <p class="col-4">
-                        <label style=" font-size: 14px"><i class="fa fa-money-bill"></i> <i class="fa fa-arrow-down"></i>  </label>
-                      </p>
-                      <p class="col-8" style="display: block">
-                        <label style="font-weight: bold; font-size: 14px; "> 22 EUR</label>
-                      </p>
-                    </div>
-                    <div class="card-body-item p-4" style="text-align: center;">
-                       <b >${receiveryData.event_data.instruction_identification}</b>
+    
+                    <div class="col-md-auto col-xl-auto mb-auto tracker-grid step" icon="fa fa-checkmark" >
+                    <div class="circle"><i class="fas fa-check" title="Completed"></i></div>
+                    <div class="card text-white bg-white shadow border-start-primary tracker-card">
+                      <div class="card-header bg-dark" style="color:white"><label class="bank-title ">
+                        <i class="fa fa-building"></i>
+                        &nbsp;${intermediaryData[0].event_data.bank_name}</label></div>
+                      <div class="card-body bg-white">
+                         <div class="card-body-item-lg card-body-item-bottom">
+                           <p style="float: left; font-size: 12px; font-weight: bold; color:black"><i class="fa fa-globe"></i>  ${intermediaryData[0].event_data.bic}</p>
+                           <p style="float: right; font-size:10px; color: black; max-width: 120px; overflow: hidden !important; white-space: nowrap; text-overflow: ellipsis;">${intermediaryData[0].event_data.bank_name}</p>
+                           <div class="row col-12" style="color:black">
+                              <i class="col-1 fa fa-map-marker"></i>
+                               <label class="col-11">
+                                 ${intermediaryData[0].event_data.city},</br>
+                                 ${intermediaryData[0].event_data.country}
+                               </label>
+                           </div>
+                         </div>
+                        <div class="d-flex card-body-item-lg card-body-item-bottom intermediary" style="padding: 10px 0px; text-align: center; font-size: 13px; gap: 20px">
+                          <div>
+                            <p><i class="fa fa-arrow-right"></i> <i class="fa fa-clock"></i></p>
+                            <p>
+                              <span style="font-size: 13px;">
+                                ${intermediaryData[0].event_data.sender_ack_receipt}
+                              </span>
+                            </p>
+                          </div>
+                          <div>
+                            <p><i class="fa fa-clock"></i> <i class="fa fa-arrow-right"></i> </p>
+                            <p>
+                              <span style="font-size: 13px;">
+                                ${intermediaryData[0].event_data.last_update_time}
+                              </span>
+                            </p>
+                          </div>
+                        </div>
+                        <div class="card-body-item card-body-item-bottom  row col-12">
+                          <p class="col-4">
+                            <label style=" font-size: 14px"><i class="fa fa-money-bill"></i> <i class="fa fa-arrow-right"></i>  </label>
+                          </p>
+                          <p class="col-8" style="display: block">
+                            <label style="font-weight: bold; font-size: 14px">54 178 EUR</label>
+                          </p>
+                        </div>
+                        <div class="card-body-item card-body-item-bottom  row col-12">
+                          <p class="col-4">
+                            <label style=" font-size: 14px"><i class="fa fa-money-bill"></i> <i class="fa fa-arrow-down"></i>  </label>
+                          </p>
+                          <p class="col-8" style="display: block">
+                            <label style="font-weight: bold; font-size: 14px; "> 22 EUR</label>
+                          </p>
+                        </div>
+                        <div class="card-body-item p-4" style="text-align: center";>
+                           <b >${intermediaryData[0].event_data.instruction_identification}</b>
+                        </div>
+                      </div>
                     </div>
                   </div>
-                </div>
-              </div>
-                `;
+    
+                    <div class="col-md-auto col-xl-auto mb-auto tracker-grid step" icon="fa fa-checkmark" >
+                    <div class="circle"><i class="fas fa-check" title="Completed"></i></div>
+                    <div class="card text-white bg-white shadow border-start-primary tracker-card">
+                      <div class="card-header bg-dark" style="color:white"><label class="bank-title ">
+                        <i class="fa fa-building"></i>
+                        &nbsp;${receiveryData.event_data.bank_name}</label></div>
+                      <div class="card-body bg-white">
+                         <div class="card-body-item-lg card-body-item-bottom">
+                           <p style="float: left; font-size: 12px; font-weight: bold; color:black"><i class="fa fa-globe"></i>  ${receiveryData.event_data.bic}</p>
+                           <p style="float: right; font-size:10px; color: black; max-width: 120px; overflow: hidden !important; white-space: nowrap; text-overflow: ellipsis;">${receiveryData.event_data.bank_name}</p>
+                           <div class="row col-12" style="color:black">
+                              <i class="col-1 fa fa-map-marker"></i>
+                               <label class="col-11">
+                                 ${receiveryData.event_data.city},</br>
+                                 ${receiveryData.event_data.country}
+                               </label>
+                           </div>
+                         </div>
+                        <div class="card-body-item-lg card-body-item-bottom" style="padding: 15px; text-align: center">
+                          <p><i class="fa fa-arrow-right"></i> <i class="fa fa-clock"></i></p>
+                            <p>
+                              <span>
+                                ${receiveryData.event_data.last_update_time}
+                              </span>
+                            </p>
+                        </div>
+                        <div class="card-body-item card-body-item-bottom  row col-12">
+                          <p class="col-4">
+                            <label style=" font-size: 14px"><i class="fa fa-money-bill"></i> <i class="fa fa-arrow-right"></i>  </label>
+                          </p>
+                          <p class="col-8" style="display: block">
+                            <label style="font-weight: bold; font-size: 14px">54 178 EUR</label>
+                          </p>
+                        </div>
+                        <div class="card-body-item card-body-item-bottom  row col-12">
+                          <p class="col-4">
+                            <label style=" font-size: 14px"><i class="fa fa-money-bill"></i> <i class="fa fa-arrow-down"></i>  </label>
+                          </p>
+                          <p class="col-8" style="display: block">
+                            <label style="font-weight: bold; font-size: 14px; "> 22 EUR</label>
+                          </p>
+                        </div>
+                        <div class="card-body-item p-4" style="text-align: center";>
+                           <b >${receiveryData.event_data.instruction_identification}</b>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                    `;
 
                 
                 
